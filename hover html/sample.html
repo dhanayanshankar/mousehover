@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background: #d6d6d6 url(http://i1208.photobucket.com/albums/cc369/sl1dr/noise.png) 0 0 repeat;
+    font-size: 100%;
+}
+div {
+    background: #f6f6f6;
+    box-shadow: 0 0 0 .5em hsla(0,0%,100%,.5),
+                0 .1em .25em .5em hsla(0,0%,0%,.1);
+    color: #444;
+    font: 1em/1.5 serif;
+    margin: 3em auto;
+    padding: 3em 4.5em;
+    width: 18em;
+}
+a { 
+    border-bottom: .1em solid #36c;
+    color: #444;
+    position: relative;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: #36c;
+}
+
+/* Tooltip styling */
+
+a[data-tooltip]:after,
+a[data-tooltip]:before {
+    content: '';
+    display: none;
+    font-size: .75em;
+    position: absolute;
+}
+a[data-tooltip]:after {
+    border-top: .5em solid #222;
+    border-top: .5em solid hsla(0,0%,0%,.9);
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    height: 0;
+    left: 40%;
+    width: 0;
+}
+a[data-tooltip]:before {
+    background-color: #222;
+    background-color: hsla(0,0%,0%,.9);
+    border-radius: .25em;
+    color: #f6f6f6;
+    content: attr(data-tooltip);
+    font-family: sans-serif;
+    left: 0;
+    padding: .25em .75em;
+    white-space: nowrap;
+}
+a[data-tooltip]:hover:after,
+a[data-tooltip]:hover:before {
+    display: block;
+}
+a[data-tooltip]:hover:after {
+    top: -.5em;
+}
+a[data-tooltip]:hover:before {
+    top: -2.5em;
+}
+</style>
+</head>
+<body>
+<div>
+<div>
+    <p>I am a paragraph containing a link. Would you like to <a href="javascript:void(0);" data-tooltip="I am so glad you decided to hover!">hover over me</a> at all?</p>
+</div>
+</div>
+</body>
+</html>
